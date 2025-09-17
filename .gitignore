@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Reativities/.vs
+/Reativities/API/bin/Debug/net9.0
+/Reativities/API/obj
+/Reativities/API/reactivities.db
+/Reativities/Application/bin/Debug/net9.0
+/Reativities/Application/obj
+/Reativities/Domain/bin/Debug/net9.0
+/Reativities/Domain/obj
+/Reativities/Persistence/bin/Debug/net9.0
+/Reativities/Persistence/obj
