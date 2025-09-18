@@ -6,6 +6,10 @@ namespace API.Controllers
 {
     public class ActivitiesController(AppDbContext appDbContext) : BaseApiController
     {
+        /// <summary>
+        /// GetActivities
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetActivities()
         {
@@ -13,6 +17,11 @@ namespace API.Controllers
             return Ok(activities);
         }
 
+        /// <summary>
+        /// GetActivity
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetActivity(string id)
         {

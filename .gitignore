@@ -13,3 +13,5 @@
 /Reativities/Domain/obj
 /Reativities/Persistence/bin/Debug/net9.0
 /Reativities/Persistence/obj
+/Reativities/API/reactivities.db-shm
+/Reativities/API/reactivities.db-wal
