@@ -1,4 +1,6 @@
+using Application.Core;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Persistence;
 
@@ -13,7 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Application.Activities.Queries.GetActivityList>());
+builder.Services.AddAutoMapper(cfg => { /* config */ }, typeof(MappingProfiles).Assembly);
 // Add Swagger services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
